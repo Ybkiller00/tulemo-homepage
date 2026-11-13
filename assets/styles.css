@@ -1,0 +1,176 @@
+/* Tulemo – Aufbau: ruhige, helle Seite mit viel Luft; ein kräftiges Blau als einzige Firmenfarbe.
+   Die Produktseite Amélie setzt dieselben Bausteine mit ihrem eigenen Pflaumenton ein. Keine fremden Schriften, keine fremden Dienste. */
+:root{
+  --papier:#FAFAF8; --flaeche:#FFFFFF; --tinte:#14181F; --text:#3F4654; --leise:#69707E; --linie:#E2E4E0;
+  --akzent:#1D4ED8; --akzent-dunkel:#173EAD; --akzent-hell:#EAF0FD; --auf-akzent:#FFFFFF; --nacht:#10141B;
+  --schrift:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --breite:1120px; --rand:max(20px, env(safe-area-inset-left, 0px));
+}
+body.amelie{ --akzent:#6B3D5A; --akzent-dunkel:#55304A; --akzent-hell:#F4EFF3; }
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+body{margin:0; background:var(--papier); color:var(--text); font-family:var(--schrift); font-size:17px; line-height:1.6}
+img{max-width:100%; height:auto; display:block}
+a{color:var(--akzent)}
+h1,h2,h3{color:var(--tinte); margin:0; text-wrap:balance}
+h1{font-size:clamp(34px, 5.4vw, 58px); line-height:1.06; letter-spacing:-.03em; font-weight:750}
+h2{font-size:clamp(26px, 3.4vw, 38px); line-height:1.14; letter-spacing:-.02em; font-weight:720}
+h3{font-size:19px; line-height:1.3; font-weight:680}
+p{margin:0}
+:focus-visible{outline:3px solid var(--akzent); outline-offset:3px; border-radius:4px}
+.sprung{position:absolute; left:-999px; top:0; background:var(--tinte); color:#fff; padding:10px 14px; z-index:20}
+.sprung:focus{left:12px; top:12px}
+
+.innen{max-width:var(--breite); margin:0 auto; padding-left:var(--rand); padding-right:max(20px, env(safe-area-inset-right, 0px))}
+.abschnitt{padding-block:clamp(56px, 8vw, 96px)}
+.abschnitt.hell{background:var(--flaeche); border-block:1px solid var(--linie)}
+.vorspann{font-size:13px; font-weight:650; letter-spacing:.09em; text-transform:uppercase; color:var(--akzent); margin-bottom:14px}
+.einleitung{font-size:clamp(18px, 2vw, 21px); line-height:1.5; color:var(--text); max-width:60ch}
+.kopfzeile-abschnitt{display:grid; gap:14px; max-width:720px; margin-bottom:clamp(28px, 4vw, 44px)}
+
+/* Kopf */
+.kopf{position:sticky; top:0; z-index:10; background:rgba(250,250,248,.92); backdrop-filter:saturate(1.4) blur(10px); border-bottom:1px solid var(--linie)}
+.kopf .innen{display:flex; align-items:center; gap:20px; min-height:64px}
+.marke{display:inline-flex; align-items:center; gap:10px; font-weight:780; font-size:21px; letter-spacing:-.03em; color:var(--tinte); text-decoration:none}
+.marke svg{width:28px; height:28px; flex:none}
+.menue{display:flex; gap:26px; margin-left:auto}
+.menue a{color:var(--text); text-decoration:none; font-size:15.5px; font-weight:520}
+.menue a:hover{color:var(--tinte)}
+.knopf{display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:13px 22px; border-radius:10px; background:var(--akzent); color:var(--auf-akzent); font-weight:640; font-size:16px; text-decoration:none; border:1px solid var(--akzent); cursor:pointer; font-family:inherit; line-height:1.2}
+.knopf:hover{background:var(--akzent-dunkel); border-color:var(--akzent-dunkel)}
+.knopf.zweit{background:transparent; color:var(--tinte); border-color:#C9CDD3}
+.knopf.zweit:hover{background:var(--flaeche); border-color:var(--tinte)}
+.knopf.klein{padding:9px 16px; font-size:15px}
+.knopfreihe{display:flex; flex-wrap:wrap; gap:12px}
+
+/* Bühne */
+.buehne{padding-block:clamp(44px, 7vw, 92px) clamp(48px, 7vw, 88px)}
+.buehne .innen{display:grid; grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr); gap:clamp(28px, 5vw, 64px); align-items:center}
+.buehne-text{display:grid; gap:22px}
+.buehne .hinweis{font-size:15px; color:var(--leise)}
+
+/* Vorher / Nachher */
+.wandel{display:grid; gap:14px}
+.wandel-karte{border-radius:16px; padding:22px 24px}
+.wandel-karte h3{font-size:13px; letter-spacing:.09em; text-transform:uppercase; font-weight:650; margin-bottom:12px}
+.wandel-karte ul{list-style:none; margin:0; padding:0; display:grid; gap:9px}
+.wandel-karte li{display:flex; gap:10px; align-items:baseline}
+.vorher{background:#FFFDF6; border:1px dashed #C9C4B4; color:#5B5647}
+.vorher h3{color:#7A7362}
+.vorher li::before{content:"–"; color:#A39C88}
+.nachher{background:var(--akzent); color:var(--auf-akzent)}
+.nachher h3{color:rgba(255,255,255,.78)}
+.nachher li::before{content:"✓"; font-weight:700}
+.wandel-pfeil{justify-self:center; color:var(--leise); font-size:22px; line-height:1}
+
+/* Leistungen */
+.raster{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:1px; background:var(--linie); border:1px solid var(--linie); border-radius:16px; overflow:hidden}
+.raster > div{background:var(--flaeche); padding:clamp(22px, 3vw, 34px); display:grid; gap:10px; align-content:start}
+.raster.drei{grid-template-columns:repeat(3, minmax(0,1fr))}
+
+/* Schritte */
+.schritte{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:clamp(18px, 3vw, 32px); counter-reset:schritt}
+.schritte.drei{grid-template-columns:repeat(3, minmax(0,1fr))}
+.schritte li{counter-increment:schritt; display:grid; gap:8px; align-content:start; padding-top:18px; border-top:2px solid var(--tinte)}
+.schritte li::before{content:counter(schritt, decimal-leading-zero); font-size:13px; font-weight:700; letter-spacing:.08em; color:var(--akzent); font-variant-numeric:tabular-nums}
+
+/* Produkt */
+.produkt{display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:clamp(28px, 5vw, 64px); align-items:center}
+.geraete{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:16px; align-items:start; padding:clamp(18px, 3vw, 30px); border-radius:20px; background:#F4EFF3}
+.geraete img{border-radius:14px; border:1px solid #E3D8E0; box-shadow:0 10px 30px rgba(46,36,48,.10)}
+.geraete img:nth-child(2){margin-top:28px}
+.bildnote{font-size:13.5px; color:var(--leise); margin-top:10px}
+.punkte{list-style:none; margin:0; padding:0; display:grid; gap:12px}
+.punkte li{display:grid; grid-template-columns:22px minmax(0,1fr); gap:10px; align-items:start}
+.punkte li::before{content:""; width:8px; height:8px; margin-top:.62em; border-radius:50%; background:var(--akzent)}
+.produkt-text{display:grid; gap:20px}
+
+/* Große Ansichten */
+.schau{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:clamp(20px, 4vw, 48px); align-items:start; padding:clamp(20px, 4vw, 44px); border-radius:20px; background:#F4EFF3}
+.schau figure{margin:0; display:grid; gap:14px; justify-items:center}
+.schau img{width:100%; max-width:340px; border-radius:16px; border:1px solid #E3D8E0; box-shadow:0 12px 34px rgba(46,36,48,.12)}
+.schau figcaption{max-width:340px; font-size:15.5px; color:var(--text)}
+.schau figcaption strong{color:var(--tinte)}
+
+/* Zeitleiste Reinigung */
+.zeitleiste{display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:0; margin:0; padding:0; list-style:none; border:1px solid var(--linie); border-radius:14px; overflow:hidden; background:var(--flaeche)}
+.zeitleiste li{padding:16px 18px; border-left:1px solid var(--linie); display:grid; gap:2px}
+.zeitleiste li:first-child{border-left:0}
+.zeitleiste .tag{font-size:13px; font-weight:650; letter-spacing:.06em; text-transform:uppercase; color:var(--leise)}
+.zeitleiste .was{font-weight:650; color:var(--tinte)}
+.zeitleiste li.frei{background:var(--akzent); }
+.zeitleiste li.frei .tag, .zeitleiste li.frei .was{color:var(--auf-akzent)}
+
+/* Band */
+.band{background:var(--akzent); color:var(--auf-akzent)}
+.band h2{color:var(--auf-akzent)}
+.band .einleitung{color:rgba(255,255,255,.9)}
+.band .zwei{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:clamp(24px, 4vw, 56px)}
+.band h3{color:var(--auf-akzent); margin-bottom:8px}
+.band p{color:rgba(255,255,255,.9)}
+
+/* Über uns */
+.ueber{display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); gap:clamp(28px, 5vw, 64px); align-items:start}
+.daten{margin:0; display:grid; grid-template-columns:auto minmax(0,1fr); gap:12px 20px; padding:24px; border:1px solid var(--linie); border-radius:16px; background:var(--flaeche)}
+.daten dt{font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--leise); font-weight:620; padding-top:3px}
+.daten dd{margin:0; color:var(--tinte); font-weight:560}
+
+/* Kontakt */
+.kontakt{display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:clamp(28px, 5vw, 56px); align-items:start}
+.wege{list-style:none; margin:0; padding:0; display:grid; gap:12px}
+.weg{display:grid; grid-template-columns:44px minmax(0,1fr); gap:14px; align-items:center; padding:16px 18px; border:1px solid var(--linie); border-radius:14px; background:var(--flaeche); text-decoration:none; color:inherit}
+a.weg:hover{border-color:var(--tinte)}
+.weg .zeichen{width:44px; height:44px; border-radius:11px; background:var(--akzent-hell); color:var(--akzent); display:grid; place-items:center}
+.weg .zeichen svg{width:22px; height:22px}
+.weg strong{display:block; color:var(--tinte); font-weight:660}
+.weg span{font-size:15.5px; color:var(--leise); overflow-wrap:anywhere}
+.formular{display:grid; gap:14px; padding:clamp(20px, 3vw, 30px); border:1px solid var(--linie); border-radius:16px; background:var(--flaeche)}
+.formular h3{margin-bottom:2px}
+.feld{display:grid; gap:6px}
+.feld label{font-size:15px; font-weight:600; color:var(--tinte)}
+.feld input, .feld textarea{font:inherit; color:var(--tinte); background:var(--papier); border:1px solid #C9CDD3; border-radius:10px; padding:12px 14px; width:100%}
+.feld textarea{min-height:110px; resize:vertical}
+.feld input:focus, .feld textarea:focus{outline:3px solid var(--akzent-hell); border-color:var(--akzent)}
+.zweispaltig{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px}
+.haken{display:flex; gap:10px; align-items:flex-start; font-size:15.5px}
+.haken input{width:20px; height:20px; margin-top:3px; accent-color:var(--akzent); flex:none}
+.klein-text{font-size:14px; color:var(--leise)}
+.meldung{padding:12px 14px; border-radius:10px; font-size:15.5px; background:var(--akzent-hell); color:var(--tinte)}
+.meldung.fehler{background:#FDECEC; color:#7A1D1D}
+.falle{position:absolute; left:-5000px; width:1px; height:1px; overflow:hidden}
+
+/* Fuß */
+.fuss{background:var(--nacht); color:#B9BFCA; padding-block:40px; font-size:15px}
+.fuss .innen{display:flex; flex-wrap:wrap; gap:14px 32px; align-items:center; justify-content:space-between}
+.fuss a{color:#E6E9EE; text-decoration:none}
+.fuss a:hover{text-decoration:underline}
+.fuss nav{display:flex; flex-wrap:wrap; gap:8px 22px}
+
+/* Textseiten */
+.textseite{max-width:760px}
+.textseite h1{font-size:clamp(30px, 4.4vw, 44px); margin-bottom:22px}
+.textseite h2{font-size:22px; margin:34px 0 10px; letter-spacing:-.01em}
+.textseite p, .textseite ul{margin:0 0 14px}
+.textseite ul{padding-left:20px}
+.textseite address{font-style:normal; margin:0 0 14px}
+
+@media (max-width:900px){
+  .buehne .innen, .produkt, .ueber, .kontakt{grid-template-columns:minmax(0,1fr)}
+  .schritte, .schritte.drei{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .raster.drei{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .menue{display:none}
+  .kopf .knopf{margin-left:auto}
+}
+@media (max-width:620px){
+  body{font-size:16.5px}
+  .raster, .raster.drei, .schritte, .schritte.drei, .band .zwei, .zweispaltig, .schau{grid-template-columns:minmax(0,1fr)}
+  .zeitleiste{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .zeitleiste li:nth-child(3){border-left:0}
+  .zeitleiste li:nth-child(n+3){border-top:1px solid var(--linie)}
+  .knopfreihe .knopf{flex:1 1 100%}
+  .kopf .knopf.klein{padding:8px 12px; font-size:14px}
+  .daten{grid-template-columns:minmax(0,1fr); gap:2px 0}
+  .daten dd{margin-bottom:10px}
+}
