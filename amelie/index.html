@@ -213,7 +213,10 @@
           <div class="feld"><label for="f-nachricht">Wann passt es Ihnen?</label><textarea id="f-nachricht" name="nachricht" placeholder="Zum Beispiel: dienstags ab 10 Uhr, am liebsten am Telefon"></textarea></div>
           <label class="haken-zeile"><input type="checkbox" name="rueckruf" value="ja"> <span>Bitte rufen Sie mich zurück.</span></label>
           <div class="falle" aria-hidden="true"><label for="f-web">Bitte leer lassen</label><input id="f-web" name="website" type="text" tabindex="-1" autocomplete="off"></div>
-          <button class="knopf" type="submit">Anfrage senden <span class="pfeil" aria-hidden="true">→</span></button>
+          <div class="knopfreihe">
+            <button class="knopf" type="button" data-weg="whatsapp">Per WhatsApp senden <span class="pfeil" aria-hidden="true">→</span></button>
+            <button class="knopf zweit" type="submit">Anfrage senden <span class="pfeil" aria-hidden="true">→</span></button>
+          </div>
           <div class="meldung" role="status" hidden></div>
           <p class="klein-text">Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu beantworten. Mehr dazu in der <a href="../datenschutz.html">Datenschutzerklärung</a>.</p>
         </form>
