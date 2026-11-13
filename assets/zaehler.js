@@ -7,9 +7,9 @@
     window.TULEMO_KENNUNG = l;
     var z = window.TULEMO_ZAEHLER;
     if (z && z.url && z.key) {
-      fetch(z.url + '/rest/v1/werbung_aufrufe', { method: 'POST', keepalive: true,
-        headers: { apikey: z.key, Authorization: 'Bearer ' + z.key, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
-        body: JSON.stringify({ code: l, seite: 'amelie' }) }).catch(function () {});
+      fetch(z.url + '/rest/v1/rpc/werbung_aufruf_melden', { method: 'POST', keepalive: true,
+        headers: { apikey: z.key, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ p_code: l, p_seite: 'amelie' }) }).catch(function () {});
     }
     p.delete('l');
     var rest = p.toString();
