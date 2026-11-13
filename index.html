@@ -9,7 +9,8 @@
 <meta property="og:description" content="Vom Zettel in die App: Wir digitalisieren mittelständische Betriebe, Schritt für Schritt.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
-<meta name="theme-color" content="#FAFAF8">
+<meta property="og:image" content="https://tulemo.de/assets/foto-team.jpg">
+<meta name="theme-color" content="#F6F8FC">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
@@ -19,7 +20,7 @@
 <header class="kopf">
   <div class="innen">
     <a class="marke" href="index.html" aria-label="Tulemo, zur Startseite">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#1D4ED8"/><path d="M12.6 6.8v5.1H9.8v4h2.8v5.6c0 3.1 1.9 4.7 4.9 4.7 1 0 2-.2 2.9-.5v-4c-.5.2-1.1.3-1.6.3-1 0-1.5-.5-1.5-1.5v-4.6h3.3v-4h-3.3V6.8z" fill="#fff"/></svg>
+      <svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="tv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2F5BFF"/><stop offset="1" stop-color="#06B6D4"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#tv)"/><path d="M12.6 6.8v5.1H9.8v4h2.8v5.6c0 3.1 1.9 4.7 4.9 4.7 1 0 2-.2 2.9-.5v-4c-.5.2-1.1.3-1.6.3-1 0-1.5-.5-1.5-1.5v-4.6h3.3v-4h-3.3V6.8z" fill="#fff"/></svg>
       Tulemo
     </a>
     <nav class="menue" aria-label="Hauptmenü">
@@ -38,16 +39,34 @@
     <div class="innen">
       <div class="buehne-text">
         <p class="vorspann">Software für den Mittelstand</p>
-        <h1>Vom Zettel in die App. Schritt für Schritt.</h1>
+        <h1>Vom Zettel <span class="verlauf">in die App.</span></h1>
         <p class="einleitung">Tulemo ist ein junges Softwareunternehmen aus Frankfurt am Main. Wir digitalisieren mittelständische Betriebe – mit Software, die sich an Ihre Abläufe anpasst, statt umgekehrt.</p>
         <div class="knopfreihe">
-          <a class="knopf" href="#kontakt">Gespräch vereinbaren</a>
+          <a class="knopf" href="#kontakt">Gespräch vereinbaren <span class="pfeil" aria-hidden="true">→</span></a>
           <a class="knopf zweit" href="amelie/index.html">Unsere Verleih-App ansehen</a>
         </div>
-        <p class="hinweis">Zehn Minuten am Telefon genügen für den Anfang.</p>
+        <ul class="fakten">
+          <li>Sitz in Frankfurt am Main</li>
+          <li>Ihre Daten auf Servern in Deutschland</li>
+          <li>Für Tablet, Smartphone und Computer</li>
+        </ul>
       </div>
+      <div class="buehne-bild">
+        <img class="foto" src="assets/foto-team.jpg" width="1500" height="844" alt="Ein Team sitzt gut gelaunt gemeinsam an einem Laptop">
+        <div class="schild oben"><span class="haken" aria-hidden="true">✓</span> Alles an einer Stelle</div>
+        <div class="schild unten"><span class="haken" aria-hidden="true">✓</span> Erinnerungen gehen von allein raus</div>
+      </div>
+    </div>
+  </section>
 
-      <div class="wandel" aria-label="Vorher und nachher">
+  <section class="abschnitt hell" id="wandel">
+    <div class="innen">
+      <div class="kopfzeile-abschnitt">
+        <p class="vorspann">Vorher und nachher</p>
+        <h2>Weniger Zettel. Mehr Überblick.</h2>
+        <p class="einleitung">Viele Betriebe arbeiten mit Wandkalender, Listen und Zetteln. Das funktioniert, kostet aber jeden Tag Zeit und Nerven.</p>
+      </div>
+      <div class="wandel">
         <div class="wandel-karte vorher">
           <h3>Heute in vielen Betrieben</h3>
           <ul>
@@ -57,7 +76,7 @@
             <li>Erinnerungen per Anruf, wenn Zeit dafür ist</li>
           </ul>
         </div>
-        <div class="wandel-pfeil" aria-hidden="true">↓</div>
+        <div class="wandel-pfeil" aria-hidden="true">→</div>
         <div class="wandel-karte nachher">
           <h3>Mit Tulemo</h3>
           <ul>
@@ -71,27 +90,31 @@
     </div>
   </section>
 
-  <section class="abschnitt hell" id="leistungen">
+  <section class="abschnitt" id="leistungen">
     <div class="innen">
       <div class="kopfzeile-abschnitt">
         <p class="vorspann">Was wir tun</p>
         <h2>Digitalisierung, die im Alltag ankommt</h2>
         <p class="einleitung">Wir bauen keine Software für die Schublade. Wir schauen uns an, wie Ihr Betrieb arbeitet, und setzen genau dort an.</p>
       </div>
-      <div class="raster">
-        <div>
+      <div class="karten">
+        <div class="karte">
+          <span class="zeichen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.6"/><path d="M11 18.2h2"/></svg></span>
           <h3>Apps nach Maß</h3>
           <p>Für Tablet, Smartphone und Computer. Gebaut für die Abläufe, die es in Ihrem Betrieb wirklich gibt.</p>
         </div>
-        <div>
+        <div class="karte">
+          <span class="zeichen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M8 3v4M16 3v4M3.5 10.5h17"/></svg></span>
           <h3>Termine, Buchungen, Bestand</h3>
           <p>Wir lösen Wandkalender, Excel-Listen und Zettel ab. Was frei ist, was fällig ist und was fehlt, steht an einer Stelle.</p>
         </div>
-        <div>
+        <div class="karte">
+          <span class="zeichen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16.5V11a6 6 0 1 1 12 0v5.5l1.6 2H4.4z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg></span>
           <h3>Erinnerungen und Berichte von allein</h3>
           <p>SMS an Ihre Kundschaft, Monatsumsatz als PDF oder Excel-Datei. Was sich wiederholt, übernimmt die Software.</p>
         </div>
-        <div>
+        <div class="karte">
+          <span class="zeichen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 19.5a6.2 6.2 0 0 1 12.4 0"/><path d="M16 4.9a3.3 3.3 0 0 1 0 6.2M18.4 19.5a6.2 6.2 0 0 0-2.6-5"/></svg></span>
           <h3>Einrichtung und Begleitung</h3>
           <p>Wir tragen Ihre Daten mit Ihnen ein, richten alles ein und bleiben danach ansprechbar.</p>
         </div>
@@ -99,11 +122,31 @@
     </div>
   </section>
 
-  <section class="abschnitt" id="ablauf">
+  <section class="abschnitt hell">
+    <div class="innen geteilt">
+      <div class="bild">
+        <img src="assets/foto-entwicklung.jpg" width="1200" height="675" alt="Ein Mann arbeitet lächelnd an einem Laptop" loading="lazy">
+      </div>
+      <div class="inhalt">
+        <p class="vorspann">Software nach Maß</p>
+        <h2>Gebaut für Ihren Betrieb</h2>
+        <p class="einleitung">Fertige Programme passen selten ganz. Wir richten unsere Software so ein, dass sie zu Ihrer Arbeit passt, und nicht umgekehrt.</p>
+        <ul class="punkte">
+          <li>Mit Ihren Daten, Ihren Preisen und Ihren Abläufen</li>
+          <li>Auf den Geräten, mit denen Sie ohnehin arbeiten</li>
+          <li>Mit einem Ansprechpartner, der Ihre Software kennt</li>
+        </ul>
+        <a class="knopf" href="#kontakt">Gespräch vereinbaren <span class="pfeil" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="abschnitt dunkel" id="ablauf">
     <div class="innen">
       <div class="kopfzeile-abschnitt">
         <p class="vorspann">So arbeiten wir</p>
         <h2>In vier Schritten zur eigenen Lösung</h2>
+        <p class="einleitung">Ohne Fachsprache und ohne lange Vorlaufzeit. Sie wissen bei jedem Schritt, woran Sie sind.</p>
       </div>
       <ol class="schritte">
         <li>
@@ -126,8 +169,8 @@
     </div>
   </section>
 
-  <section class="abschnitt hell" id="amelie">
-    <div class="innen produkt">
+  <section class="abschnitt" id="amelie">
+    <div class="innen geteilt">
       <div>
         <div class="geraete">
           <img src="assets/amelie-verfuegbarkeit.jpg" width="600" height="916" alt="Amélie: Ansicht „Ist das Kleid frei?“ mit Abholung, Rückgabe und Reinigungstag" loading="lazy">
@@ -135,25 +178,21 @@
         </div>
         <p class="bildnote">Aufnahmen aus der App.</p>
       </div>
-      <div class="produkt-text">
-        <div>
-          <p class="vorspann">Unser Produkt</p>
-          <h2>Amélie, die App für Verleihe</h2>
-        </div>
+      <div class="inhalt">
+        <p class="vorspann">Unser Produkt</p>
+        <h2>Amélie, die App für Verleihe</h2>
         <p class="einleitung">Für Kleider-, Kostüm- und Trachtenverleihe. Amélie zeigt bei jeder Anfrage sofort, welches Stück am Wunschtag frei ist – die Reinigung schon eingerechnet.</p>
         <ul class="punkte">
           <li>Abholungen, Rückgaben und Überfälliges des Tages auf einen Blick</li>
           <li>Erinnerung an die Rückgabe per SMS</li>
           <li>Miete, Kaution und Monatsumsatz ohne Rechnen</li>
         </ul>
-        <div class="knopfreihe">
-          <a class="knopf" href="amelie/index.html">Mehr zu Amélie</a>
-        </div>
+        <a class="knopf" href="amelie/index.html">Mehr zu Amélie <span class="pfeil" aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
 
-  <section class="abschnitt" id="ueber">
+  <section class="abschnitt hell" id="ueber">
     <div class="innen ueber">
       <div class="kopfzeile-abschnitt" style="margin-bottom:0">
         <p class="vorspann">Über uns</p>
@@ -169,24 +208,27 @@
     </div>
   </section>
 
-  <section class="abschnitt hell" id="kontakt">
+  <section class="abschnitt" id="kontakt">
     <div class="innen">
-      <div class="kopfzeile-abschnitt">
-        <p class="vorspann">Kontakt</p>
-        <h2>Sprechen wir über Ihren Betrieb</h2>
-        <p class="einleitung">Wählen Sie den Weg, der Ihnen am liebsten ist. Wir melden uns schnell zurück.</p>
+      <div class="kontakt-kopf">
+        <div class="worte">
+          <p class="vorspann">Kontakt</p>
+          <h2>Sprechen wir über Ihren Betrieb</h2>
+          <p class="einleitung">Wählen Sie den Weg, der Ihnen am liebsten ist. Wir melden uns schnell zurück.</p>
+        </div>
+        <img src="assets/foto-bildschirm.jpg" width="1500" height="844" alt="Mehrere Menschen schauen gemeinsam auf einen Bildschirm und lachen" loading="lazy">
       </div>
       <div class="kontakt">
         <ul class="wege">
           <li><a class="weg" href="https://wa.me/491602812351?text=Hallo%20Tulemo%2C%20ich%20m%C3%B6chte%20%C3%BCber%20eine%20L%C3%B6sung%20f%C3%BCr%20meinen%20Betrieb%20sprechen." rel="noopener">
             <span class="zeichen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3.5 20l1.2-4.2A8.5 8.5 0 1 1 20.5 11.5z"/></svg></span>
-            <span><strong>WhatsApp schreiben</strong><span>0160 2812351</span></span></a></li>
+            <span><strong>WhatsApp schreiben</strong><span class="unter">0160 2812351</span></span><span class="geh" aria-hidden="true">→</span></a></li>
           <li><a class="weg" href="tel:+491602812351">
             <span class="zeichen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
-            <span><strong>Anrufen</strong><span>0160 2812351</span></span></a></li>
+            <span><strong>Anrufen</strong><span class="unter">0160 2812351</span></span><span class="geh" aria-hidden="true">→</span></a></li>
           <li><a class="weg" href="mailto:info@tulemo.de">
             <span class="zeichen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></span>
-            <span><strong>E-Mail schreiben</strong><span>info@tulemo.de</span></span></a></li>
+            <span><strong>E-Mail schreiben</strong><span class="unter">info@tulemo.de</span></span><span class="geh" aria-hidden="true">→</span></a></li>
         </ul>
 
         <form class="formular" id="anfrage" data-endpoint="" data-betreff="Anfrage über tulemo.de" novalidate>
@@ -197,9 +239,9 @@
           </div>
           <div class="feld"><label for="f-kontakt">Telefon oder E-Mail</label><input id="f-kontakt" name="kontakt" type="text" inputmode="email" autocomplete="email" required></div>
           <div class="feld"><label for="f-nachricht">Worum geht es?</label><textarea id="f-nachricht" name="nachricht"></textarea></div>
-          <label class="haken"><input type="checkbox" name="rueckruf" value="ja"> <span>Bitte rufen Sie mich zurück.</span></label>
+          <label class="haken-zeile"><input type="checkbox" name="rueckruf" value="ja"> <span>Bitte rufen Sie mich zurück.</span></label>
           <div class="falle" aria-hidden="true"><label for="f-web">Bitte leer lassen</label><input id="f-web" name="website" type="text" tabindex="-1" autocomplete="off"></div>
-          <button class="knopf" type="submit">Anfrage senden</button>
+          <button class="knopf" type="submit">Anfrage senden <span class="pfeil" aria-hidden="true">→</span></button>
           <div class="meldung" role="status" hidden></div>
           <p class="klein-text">Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu beantworten. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
         </form>
@@ -213,6 +255,7 @@
   <div class="innen">
     <span>© 2026 Tulemo UG (haftungsbeschränkt) i. G. · Frankfurt am Main</span>
     <nav aria-label="Rechtliches"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>
+    <span class="fein">Die Fotos von Menschen auf dieser Seite sind Symbolbilder.</span>
   </div>
 </footer>
 
