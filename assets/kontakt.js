@@ -37,6 +37,7 @@
       name: name, betrieb: wert('betrieb'), kontakt: kontakt, rueckruf: rueckruf ? 'ja' : 'nein', nachricht: wert('nachricht'),
       zeilen: ['Name: ' + name, 'Betrieb: ' + (wert('betrieb') || '–'), 'Erreichbar unter: ' + kontakt,
                'Rückruf gewünscht: ' + (rueckruf ? 'ja' : 'nein'), '', wert('nachricht') || '(keine Nachricht)']
+               .concat(window.TULEMO_KENNUNG ? ['', 'Kennung: ' + window.TULEMO_KENNUNG] : [])
     };
   }
 
